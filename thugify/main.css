@@ -1,0 +1,27 @@
+body {
+    background-color: darkblue;
+    color: white;
+    font-family: Rock Salt;
+}
+.thuggin {
+    text-align: center;
+}
+#title {
+    font-size: 100px;
+}
+#caption {
+    font-size: 30px;
+}
+#text-input {
+    padding: 9px;
+    border-radius: 5px;
+}
+#go {
+    background-color: #3385ff;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    font-family: Verdana;
+    font-weight: 500;
+    border-radius: 5px;
+}
