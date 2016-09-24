@@ -1,12 +1,14 @@
-$('#dot').on("click", function() {
+$('#dot').click(function() {
     var docHeight = $(document).height(),
         docWidth = $(document).width(),
         $div = $('#dot'),
         divWidth = $div.width(),
-        divHeight = $div.height();
+        divHeight = $div.height(),
+        heightMax = docHeight - divHeight,
+        widthMax = docWidth - divWidth;
 
     $div.css({
-        left: Math.floor( Math.random() * docWidth ),
-        top: Math.floor( Math.random() * docHeight )
+        left: Math.floor( Math.random() * widthMax ),
+        top: Math.floor( Math.random() * heightMax )
     });
 });
