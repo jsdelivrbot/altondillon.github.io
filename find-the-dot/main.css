@@ -1,0 +1,8 @@
+#dot {
+position: absolute;
+    background-color: cyan;
+    border: none;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+}
