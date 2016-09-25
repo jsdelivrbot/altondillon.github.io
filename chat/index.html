@@ -1,18 +1,35 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <title>Chat with Me!</title>
+    <title>Secret Messaging</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
     <head>
 
     <body>
-        <h1>Chat App</h1>
-        <div id="messages">
-            <input type="text" id="nameInput" placeholder="Name"/>
-            <input type="text" id="messageInput" placeholder="Message"/>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <h1 class="navbar-brand" href="#">CHAT!</h1>
+                </div>
+            </div>
+        </nav>
+        <div id="messages"></div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-2">
+                    <input type="text" class="form-control" id="nameInput" placeholder="Name"/>
+                </div>
+                <div class="col-sm-10">
+                <input class="form-control" id="messageInput" placeholder="Message"/>
+                </div>
+            </div>
         </div>
 
         <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="main.js"></script>
     </body>
 </html>
