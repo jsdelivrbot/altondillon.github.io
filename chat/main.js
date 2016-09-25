@@ -1,4 +1,4 @@
-var config = {
+/*var config = {
     apiKey: "AIzaSyBmW66N1xtmq8E8THYTSHBm3zr4Ga53lYA",
     authDomain: "chat-app-19cd6.firebaseapp.com",
     databaseURL: "https://chat-app-19cd6.firebaseio.com",
@@ -35,3 +35,4 @@ function showMessage(msg) {
 }
 
 $('#messageInput').keypress(pushMessage);
+*/
