@@ -1,9 +1,10 @@
 .navbar-default {
     background-color: #00cc99;
 }
-.navbar-header .navbar-brand {
+.navbar-header .navbar-brand,
+.navbar-header .navbar-brand:hover{
     font-family: Roboto Condensed;
-    font-size: 25px;
+    font-size: 40px;
     color: white;
 }
 #messages {
