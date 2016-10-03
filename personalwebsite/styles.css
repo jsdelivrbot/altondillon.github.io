@@ -1,7 +1,18 @@
-img {
-    width: 200px;
-}
 body {
     text-align: center;
     font-family: "Arial";
+    margin: 0;
+
+}
+h1 {
+    font-size: 75px;
+}
+.container {
+    background-color: #0059ff;
+    color: white;
+    font-size: 30px;
+}
+img {
+    border-radius: 50%;
+    border: 5px solid black;
 }
