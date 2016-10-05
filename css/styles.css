@@ -1,0 +1,75 @@
+
+.container-fluid {
+    background-image: url(/img/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 50px;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
+.glyphicon-menu-hamburger {
+    background-color: rgba(60, 60, 60, 0.8);
+    padding: 10px;
+    font-size: 25px;
+    cursor: pointer;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+#main {
+    transition: margin-left 0.3s;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #262626;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+}
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #bfbfbf;
+    display: block;
+    transition: 0.3s;
+}
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+#hello {
+    font-size: 50px;
+}
+#alton-dillon {
+    font-size: 65px;
+}
+#hack {
+    font-size: 35px;
+}
+#and {
+    padding: 20px;
+}
+#photo {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border: 3px solid black;
+}
