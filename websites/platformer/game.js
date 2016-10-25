@@ -23,34 +23,52 @@ function setup() {
 }
 
 function draw() {
+    //set up basics
     background(150, 200, 250);
     player.velocity.y = player.velocity.y + GRAVITY;
 
+    //prevent falling through ground
     if (groundSprites.overlap(player)) {
         player.velocity.y = 0;
         player.position.y = (height-50) - (player.height/2);
     }
+
+    //end the game if they overlap
+    (obstacleSprites.overlap(player, endGame));
+
+    //movement
     if (keyDown(UP_ARROW)) {
         player.velocity.y = JUMP;
     }
+    //camera code
     player.position.x = player.position.x + 5;
     camera.position.x = player.position.x + (width/4);
 
+    //regenerate the groundblocks
     var firstGroundSprite = groundSprites[0];
-
     if (firstGroundSprite.position.x <= camera.position.x - (width/2 + firstGroundSprite.width/2)) {
         groundSprites.remove(firstGroundSprite);
         firstGroundSprite.position.x = firstGroundSprite.position.x + numGroundSprites*firstGroundSprite.width;
         groundSprites.add(firstGroundSprite);
     }
+
+    //add the random generating obstacle blocks and reduce the frequency
     if (random() > 0.95) {
     var obstacle = createSprite(camera.position.x + width, (height-50) - 15, 30, 30);
     obstacleSprites.add(obstacle);
     }
 
+    //get rid of the obstacles leaving the screen
     var firstObstacle = obstacleSprites[0];
     if (obstacleSprites.length > 0 && firstObstacle.position.x <= camera.position.x - (width/2 + firstObstacle.width/2)) {
         removeSprite(firstObstacle);
     }
     drawSprites();
+}
+function endGame() {
+    console.log("Game Over!");
+    background(0);
+    textAlign(CENTER);
+    fill("white");
+    text("Game Over! Your score was " + score, width/2, height/2);
 }
