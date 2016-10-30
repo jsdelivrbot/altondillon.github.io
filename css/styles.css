@@ -1,6 +1,5 @@
 html, body {
     max-width: 100%;
-
     overflow-x: hidden;
 }
 .main {
@@ -12,6 +11,22 @@ html, body {
     text-align: center;
     font-size: 30px;
     overflow-y: hidden;
+}
+.about {
+    padding: 25px;
+    background-color: #003399;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+#about {
+    padding-left: 20px;
+}
+.contact {
+	background: #262626;
+    text-align: center;
+    font-size: 30px;
+    color: white;
 }
 .glyphicon-menu-hamburger {
     background-color: rgba(60, 60, 60, 0.8);
@@ -76,4 +91,11 @@ html, body {
     width: 300px;
     border-radius: 50%;
     border: 3px solid black;
+}
+.glyphicon-pencil, .glyphicon-education, .glyphicon-time, .glyphicon-user {
+	font-size: 100px;
+}
+.item {
+	padding-top: 50px;
+    padding-bottom: 50px;
 }
