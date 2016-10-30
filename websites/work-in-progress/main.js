@@ -3,23 +3,27 @@ var player;
 function setup() {
     createCanvas(450, 450);
     background(125, 180, 225);
-    player = createSprite(0, 0, 50, 50);
-    player.velocity.x = 2;
+    player = createSprite(width/2, height/2, 50, 50);
 }
 function draw() {
+    background(125, 180, 225);
     if (keyDown("W")) {
-        player.position.y -= 5;
+        moveDirY(-2);
     }
     if (keyDown("A")) {
-        player.position.x -= 5;
+        moveDirX(-2);
     }
     if (keyDown("S")) {
-        player.position.y += 5;
+        moveDirY(2);
     }
     if (keyDown("D")) {
-        player.position.x += 5;
+        moveDirX(2);
     }
     drawSprites();
 }
-
-
+function moveDirY(int dir) {
+    player.position.y = dir;
+}
+function moveDirX(int dir) {
+    player.position.x = dir;
+}
