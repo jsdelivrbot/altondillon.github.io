@@ -7,23 +7,9 @@ function setup() {
 }
 function draw() {
     background(125, 180, 225);
-    if (keyDown("W")) {
-        moveDirY(-2);
-    }
-    if (keyDown("A")) {
-        moveDirX(-2);
-    }
-    if (keyDown("S")) {
-        moveDirY(2);
-    }
-    if (keyDown("D")) {
-        moveDirX(2);
+    if (keyPressed = "W") {
+        player.position.y -= 2;
     }
     drawSprites();
 }
-function moveDirY(int dir) {
-    player.position.y = dir;
-}
-function moveDirX(int dir) {
-    player.position.x = dir;
-}
+
