@@ -27,6 +27,7 @@ html, body {
     text-align: center;
     font-size: 30px;
     color: white;
+    padding: 50px;
 }
 .glyphicon-menu-hamburger {
     background-color: rgba(60, 60, 60, 0.8);
@@ -92,7 +93,8 @@ html, body {
     border-radius: 50%;
     border: 3px solid black;
 }
-.glyphicon-pencil, .glyphicon-education, .glyphicon-time, .glyphicon-user {
+.glyphicon-pencil, .glyphicon-education, .glyphicon-time, .glyphicon-user, glyphicon-envelope {
+    padding-top: 25px;
 	font-size: 100px;
 }
 .item {
