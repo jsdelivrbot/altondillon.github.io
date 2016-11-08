@@ -21,7 +21,7 @@ function setup() {
     })
 
     canvas.mousePressed(drawPoint);
-    canvas.mouseMoved(drawPoint);
+    canvas.mouseMoved(drawPointIfMousePressed);
 }
 function draw() {
     background(255);
