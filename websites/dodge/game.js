@@ -1,16 +1,24 @@
 var player;
+var playerImage;
 var enemy;
+var enemyImage;
 var isGameOver;
+
+function preload() {
+    playerImage = loadImage("/img/right.gif")
+}
 
 function setup() {
     isGameOver = false;
     createCanvas(250, 250);
     player = createSprite(width/2, height-25, 50, 50);
+    player.addImage(playerImage);
     enemy = createSprite(width/2, 0, 10, 30);
 }
 function draw() {
 
-    background(0, 0, 100);
+    background(205, 212, 164);
+    drawSprites();
 
     if(isGameOver) {
         gameOver();
@@ -34,8 +42,6 @@ function draw() {
         enemy.position.x = random(5, width-5);
     }
 
-    drawSprites();
-
 }
 
 function gameOver() {
@@ -43,5 +49,13 @@ function gameOver() {
     textAlign(CENTER);
     fill("white");
     text("Game Over!", width/2, height/2);
-    text("Click anywhere to try again", width/2, 3 * height/4);
+    text("Click anywhere to try again", width/2, (3 * height/4));
+}
+
+function mouseClicked () {
+    isGameOver = false;
+    player.position.x = width/2;
+    player.position.y = height-25;
+    enemy.position.x = width/2;
+    enemy.position.y = 0;
 }
